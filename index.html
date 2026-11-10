@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calhas São Marcos — Qualidade lá em cima! | Calhas, Rufos, Coifas e Exaustores em Varginha</title>
+<meta name="description" content="Desde 1997 em Varginha/MG: calhas, condutores, rufos, pingadeiras, coifas, chaminés e exaustores eólicos sob medida para residências, comércios e indústrias. Qualidade lá em cima!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#20242b; --steel:#2a2f37; --steel2:#343a44;
+  --orange:#d92b2b; --orange2:#b91c1c; --amber:#2f7fc4;
+  --paper:#eef6fc; --line:#d9e6f0; --txt:#3c4654; --mut:#64748b;
+  --rad:16px; --sh:0 10px 30px rgba(31,64,96,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--txt);background:#fff;line-height:1.6}
+h1,h2,h3,.disp{font-family:'Archivo',sans-serif;color:var(--ink);line-height:1.12}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;padding:14px 24px;border-radius:999px;border:0;cursor:pointer;transition:.22s}
+.btn-org{background:linear-gradient(135deg,#e03232,var(--orange2));color:#fff;box-shadow:0 8px 22px rgba(217,43,43,.32)}
+.btn-org:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(217,43,43,.42)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(32,36,43,.35)}
+.btn-ghost:hover{background:rgba(32,36,43,.06)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--steel2)}
+.btn svg{width:18px;height:18px;flex:none}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:60;transition:.3s;background:rgba(255,255,255,.88);backdrop-filter:blur(10px)}
+header .bar{display:flex;align-items:center;justify-content:space-between;padding:12px 0;transition:.3s}
+header.scrolled{background:rgba(255,255,255,.97);box-shadow:0 6px 24px rgba(31,64,96,.14)}
+header.scrolled .bar{padding:8px 0}
+.logo{display:flex;align-items:center;gap:11px;color:var(--ink)}
+.logo img{height:48px;width:auto}
+.logo b{font-family:'Archivo';font-size:18px;letter-spacing:.4px;display:block;line-height:1;color:var(--ink)}
+.logo small{font-size:11px;color:var(--mut);letter-spacing:2.2px;text-transform:uppercase}
+nav.main{display:flex;gap:28px}
+nav.main a{color:#2b3444;font-weight:600;font-size:14.5px;position:relative;padding:4px 0}
+nav.main a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--orange);transition:.25s}
+nav.main a:hover::after{width:100%}
+.hdr-cta{display:flex;gap:10px;align-items:center}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:24px;height:2.5px;background:var(--ink);margin:5px 0;border-radius:2px;transition:.3s}
+/* hero */
+.hero{position:relative;background:radial-gradient(1100px 520px at 85% -10%,#bfe0f5 0%,transparent 60%),linear-gradient(165deg,#f4fafd 0%,#d9edfa 55%,#c4e3f7 100%);color:var(--txt);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(32,36,43,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(32,36,43,.05) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(700px 400px at 30% 20%,#000 30%,transparent 75%)}
+.hero .wrap{position:relative;padding:140px 20px 84px;display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(217,43,43,.08);border:1px solid rgba(217,43,43,.35);color:var(--orange2);font-weight:700;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:7px 14px;border-radius:999px}
+.hero h1{color:var(--ink);font-size:clamp(38px,5.2vw,62px);font-weight:900;margin:20px 0 8px}
+.hero h1 .hl{background:linear-gradient(92deg,#e03232,var(--orange2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .slogan{font-family:'Archivo';font-size:clamp(19px,2.4vw,26px);color:var(--orange2);font-weight:700;margin-bottom:14px}
+.hero p.lead{color:#46536a;font-size:17px;max-width:34rem}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 34px}
+.stats{display:flex;gap:14px;flex-wrap:wrap}
+.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;min-width:128px;box-shadow:var(--sh)}
+.stat b{font-family:'Archivo';font-size:27px;color:var(--ink);display:block;line-height:1}
+.stat b i{font-style:normal;color:var(--orange)}
+.stat span{font-size:12.5px;color:var(--mut);letter-spacing:.4px}
+.hero-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:14px;box-shadow:0 30px 60px rgba(31,64,96,.18)}
+.hero-card img{border-radius:14px;width:100%;height:300px;object-fit:cover}
+.hero-card .cap{display:flex;justify-content:space-between;align-items:center;padding:12px 6px 4px;color:var(--txt);font-size:13.5px}
+.hero-card .cap b{color:var(--ink);font-family:'Archivo'}
+.chip{background:#e3f1fb;color:#1d6fb8;border:1px solid #bcd9ef;font-weight:700;font-size:12px;padding:5px 11px;border-radius:999px}
+/* sections */
+section{padding:84px 0}
+.kick{color:var(--orange2);font-weight:800;font-size:13px;letter-spacing:2.4px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.kick::before{content:"";width:30px;height:3px;background:var(--orange);border-radius:2px}
+h2.title{font-size:clamp(28px,3.6vw,40px);font-weight:800;margin:12px 0 10px}
+.sub{color:var(--mut);max-width:44rem;font-size:16.5px}
+/* produtos / abas */
+.tabs{display:flex;gap:9px;flex-wrap:wrap;margin:34px 0 26px}
+.tab{border:1.5px solid var(--line);background:#fff;color:var(--ink);font-weight:700;font-size:14.5px;padding:11px 18px;border-radius:999px;cursor:pointer;transition:.2s;display:inline-flex;gap:8px;align-items:center}
+.tab svg{width:16px;height:16px}
+.tab:hover{border-color:var(--orange);color:var(--orange2)}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:36px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:34px;animation:fade .45s ease}
+.panel.on{display:grid}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel h3{font-size:26px;margin-bottom:10px}
+.panel p{color:var(--txt)}
+.panel ul{margin:16px 0 0 0;list-style:none}
+.panel ul li{padding:7px 0 7px 28px;position:relative;font-weight:500}
+.panel ul li::before{content:"";position:absolute;left:0;top:13px;width:15px;height:15px;border-radius:50%;background:var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E") center/9px no-repeat}
+.panel .fig{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--sh)}
+.panel .fig img{width:100%;height:230px;object-fit:contain}
+/* simulador */
+.sim-sec{background:linear-gradient(165deg,#e9f5fd,#d2e9f8);color:var(--txt);position:relative;overflow:hidden}
+.sim-sec h2.title{color:var(--ink)}
+.sim-sec .sub{color:#5b6b82}
+.sim{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;margin-top:36px}
+.sim .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--sh)}
+.sim label{font-weight:700;font-size:13.5px;letter-spacing:.4px;color:var(--ink);display:block;margin:0 0 9px}
+.sim .row{margin-bottom:20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chipopt{border:1.5px solid #c8dae8;background:#fff;color:var(--txt);font-weight:600;font-size:14px;padding:9px 15px;border-radius:999px;cursor:pointer;transition:.18s}
+.chipopt:hover{border-color:var(--amber)}
+.chipopt.on{background:var(--orange);border-color:var(--orange);color:#fff}
+input[type=range]{width:100%;accent-color:var(--orange);height:28px;cursor:pointer}
+.rangeval{font-family:'Archivo';font-size:21px;color:var(--ink)}
+.rangeval b{color:var(--orange)}
+select,input[type=text],input[type=tel],textarea{width:100%;background:#fff;border:1.5px solid #c8dae8;color:var(--ink);border-radius:11px;padding:12px 14px;font:inherit;font-size:15px}
+select option{color:#111}
+textarea{resize:vertical;min-height:74px}
+.sim .summary{background:#fdfdfd;border:1.5px dashed rgba(217,43,43,.45);border-radius:16px;padding:20px;font-size:15px}
+.sim .summary h3{color:var(--ink);font-size:17px;margin-bottom:10px}
+.sim .summary p{color:#46536a}
+.sim .summary b{color:var(--orange2)}
+.sim .fineprint{font-size:12.5px;color:#7186a0;margin-top:12px}
+/* história / linha do tempo */
+.tl{margin-top:38px;border-left:3px solid var(--line);padding-left:0}
+.tl .ev{position:relative;padding:0 0 30px 34px}
+.tl .ev::before{content:"";position:absolute;left:-10px;top:4px;width:17px;height:17px;border-radius:50%;background:#fff;border:4px solid var(--orange)}
+.tl .yr{font-family:'Archivo';font-weight:900;color:var(--orange2);font-size:19px}
+.tl h3{font-size:18.5px;margin:2px 0 5px}
+.tl p{color:var(--mut);max-width:46rem}
+.clients{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.clients span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:700;color:var(--ink);font-size:14px}
+/* valores / acordeão */
+.acc{max-width:820px;margin:34px auto 0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.acc .item+.item{border-top:1px solid var(--line)}
+.acc button{width:100%;background:#fff;border:0;padding:19px 22px;display:flex;justify-content:space-between;align-items:center;font:inherit;font-weight:700;color:var(--ink);font-size:16px;cursor:pointer;text-align:left}
+.acc button .pl{width:26px;height:26px;flex:none;border-radius:50%;background:var(--paper);display:grid;place-items:center;transition:.3s;color:var(--orange2);font-size:18px;font-weight:800}
+.acc .body{max-height:0;overflow:hidden;transition:max-height .4s ease;background:var(--paper)}
+.acc .body div{padding:18px 22px;color:var(--txt)}
+.acc .item.open .pl{transform:rotate(45deg);background:var(--orange);color:#fff}
+.valores{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:820px;margin:22px auto 0}
+.valores span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-weight:700;color:var(--ink);font-size:14px}
+/* galeria */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}
+.gal button{border:0;padding:0;border-radius:14px;overflow:hidden;cursor:zoom-in;background:var(--paper);position:relative}
+.gal img{width:100%;height:180px;object-fit:cover;transition:.4s}
+.gal button:hover img{transform:scale(1.07)}
+.lightbox{position:fixed;inset:0;background:rgba(5,8,15,.92);z-index:90;display:none;place-items:center;padding:20px}
+.lightbox.open{display:grid}
+.lightbox img{max-height:86vh;border-radius:12px}
+.lightbox .x{position:absolute;top:18px;right:22px;background:rgba(255,255,255,.12);color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:21px;cursor:pointer}
+/* contato */
+.contato{background:var(--paper);border-top:1px solid var(--line)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:34px}
+.ccard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--sh)}
+.ccard h3{font-size:19px;margin-bottom:14px}
+.crow{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+.crow:last-child{border-bottom:0}
+.crow svg{width:20px;height:20px;flex:none;color:var(--orange2);margin-top:2px}
+.crow b{color:var(--ink)}
+.map{border:0;width:100%;height:100%;min-height:320px;border-radius:18px;box-shadow:var(--sh)}
+footer{background:var(--ink);color:#93a5bd;padding:38px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer b{color:#fff;font-family:'Archivo'}
+.fab{position:fixed;right:18px;bottom:18px;z-index:70;background:linear-gradient(135deg,#e03232,var(--orange2));color:#fff;font-weight:800;font-size:14.5px;padding:14px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(217,43,43,.4);display:inline-flex;gap:9px;align-items:center;transition:.2s}
+.fab:hover{transform:translateY(-2px)}
+.fab svg{width:18px;height:18px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:920px){
+  nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);flex-direction:column;padding:16px 22px;gap:6px;box-shadow:0 18px 30px rgba(31,64,96,.15)}
+  nav.main.open{display:flex}
+  .burger{display:block}
+  .hdr-cta .btn{display:none}
+  .hero .wrap{grid-template-columns:1fr;padding-top:126px}
+  .panel,.sim,.cgrid{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .valores{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="logo" href="#topo" aria-label="Calhas São Marcos">
+      <img src="https://calhassaomarcos.com.br/wp-content/uploads/2024/04/logo-3435x4279-1.png" alt="Logo Calhas São Marcos">
+      <span><b>CALHAS SÃO MARCOS</b><small>Qualidade lá em cima</small></span>
+    </a>
+    <nav class="main" id="menu">
+      <a href="#produtos">Produtos</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#historia">História</a>
+      <a href="#empresa">A Empresa</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="btn btn-org" href="tel:+553532123707">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+        (35) 3212-3707
+      </a>
+      <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="topo" style="padding:0">
+  <div class="wrap">
+    <div>
+      <span class="tag">Desde 1997 · Varginha – MG</span>
+      <h1>Calhas, rufos e coifas sob medida, com <span class="hl">acabamento de verdade</span>.</h1>
+      <p class="slogan">"Qualidade lá em cima!"</p>
+      <p class="lead">Há 28 anos fabricamos e instalamos calhas, condutores, rufos, pingadeiras, coifas, chaminés e exaustores eólicos para residências, comércios, indústrias e construção civil em Varginha e região.</p>
+      <div class="ctas">
+        <a class="btn btn-org" href="#orcamento">Montar meu orçamento
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#produtos">Ver produtos</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b><span data-count="28">0</span><i> anos</i></b><span>de história</span></div>
+        <div class="stat"><b><span data-count="6">0</span><i> linhas</i></b><span>de produtos sob medida</span></div>
+        <div class="stat"><b><span data-count="3">0</span><i> perfis</i></b><span>residencial · comercial · industrial</span></div>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <img src="https://calhassaomarcos.com.br/wp-content/uploads/2026/01/a2-1-1920x1200-1.png" alt="Instalação de calhas realizada pela Calhas São Marcos">
+      <div class="cap"><span><b>Equipe especializada</b> · produção e instalação próprias</span><span class="chip">Sob medida</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="produtos">
+  <div class="wrap">
+    <p class="kick">Produtos</p>
+    <h2 class="title">Tudo para a água e o ar irem para o lugar certo</h2>
+    <p class="sub">Clique em cada produto para conhecer: fabricação própria, materiais de qualidade e instalação com equipe treinada.</p>
+
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div id="panels"></div>
+  </div>
+</section>
+
+<section class="sim-sec" id="orcamento">
+  <div class="wrap">
+    <p class="kick" style="color:var(--amber)">Orçamento interativo</p>
+    <h2 class="title">Monte seu pedido em 30 segundos</h2>
+    <p class="sub">Escolha o produto, o material e a metragem aproximada. No final, o site monta o resumo e abre seu e-mail pronto para enviar à nossa equipe — sem compromisso.</p>
+
+    <div class="sim">
+      <div class="card">
+        <div class="row">
+          <label>1 · O que você precisa?</label>
+          <div class="chips" id="sim-prod"></div>
+        </div>
+        <div class="row">
+          <label>2 · Material de preferência</label>
+          <div class="chips" id="sim-mat"></div>
+        </div>
+        <div class="row">
+          <label>3 · Metragem aproximada</label>
+          <div class="rangeval"><b id="metros-val">15</b> metros <span style="font-size:13px;color:#8496b0">(arraste para ajustar)</span></div>
+          <input type="range" id="metros" min="2" max="120" value="15" step="1">
+        </div>
+        <div class="row">
+          <label>4 · Tipo de imóvel</label>
+          <div class="chips" id="sim-tipo"></div>
+        </div>
+        <div class="row" style="margin-bottom:0">
+          <label>5 · Seu nome</label>
+          <input type="text" id="sim-nome" placeholder="Ex.: Maria Silva">
+        </div>
+      </div>
+      <div class="card">
+        <div class="summary">
+          <h3>Resumo do seu pedido</h3>
+          <p id="resumo">Selecione as opções ao lado e seu pedido aparece aqui, prontinho.</p>
+        </div>
+        <a class="btn btn-org" id="btn-enviar" href="#" style="margin-top:18px;width:100%;justify-content:center">
+          Enviar pedido de orçamento
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="tel:+553532123707" style="margin-top:10px;width:100%;justify-content:center">Prefiro ligar: (35) 3212-3707</a>
+        <p class="fineprint">O envio abre seu aplicativo de e-mail com o resumo preenchido para contato@calhassaomarcos.com.br. A medição exata e o orçamento final são feitos pela nossa equipe, sem compromisso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="historia">
+  <div class="wrap">
+    <p class="kick">Nossa história</p>
+    <h2 class="title">De autônomo a referência no segmento</h2>
+    <div class="tl">
+      <div class="ev reveal"><span class="yr">1997</span><h3>O começo</h3><p>Marcos Francisco Barbosa funda a empresa em novembro de 1997, em Varginha. O que começou como meio de sobrevivência da família — pequenos serviços de instalação de calhas como autônomo — enxergou um mercado carente de mão de obra especializada.</p></div>
+      <div class="ev reveal"><span class="yr">Os primeiros clientes</span><h3>Confiança de grandes nomes</h3><p>Desde o início, a empresa atendeu clientes como Coca-Cola, Cooper Standard Automotive e Colégio Marista, formando uma equipe treinada pelo próprio fundador.</p>
+        <div class="clients"><span>Coca-Cola</span><span>Cooper Standard Automotive</span><span>Colégio Marista</span></div></div>
+      <div class="ev reveal"><span class="yr">Hoje</span><h3>28 anos e casa nova</h3><p>Depois de 23 anos no mesmo endereço, a Calhas São Marcos iniciou um novo capítulo: um espaço maior e mais moderno na Av. Comendador Manuel Senda, preparado para receber clientes e transformar projetos em realidade — com a mesma qualidade de sempre.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="empresa" style="padding-top:0">
+  <div class="wrap">
+    <p class="kick">A empresa</p>
+    <h2 class="title">Missão, visão e valores</h2>
+    <p class="sub" style="margin:0 auto;text-align:center">Toque em cada item para expandir.</p>
+    <div class="valores">
+      <span>Compromisso com o cliente</span><span>Valorização da equipe</span><span>Ética e transparência</span>
+      <span>Inovação e melhoria</span><span>Qualidade e estética</span><span>Sustentabilidade e gratidão</span>
+    </div>
+    <div class="acc" id="acc">
+      <div class="item"><button>Missão <span class="pl">+</span></button><div class="body"><div>Vender produtos e serviços com garantia, conforto e estética, prestando assessoria plena ao cliente, com atendimento personalizado, visando à redução de tempo e à total satisfação de nossos clientes.</div></div></div>
+      <div class="item"><button>Visão <span class="pl">+</span></button><div class="body"><div>Ser reconhecida em seu segmento pelos serviços prestados à indústria, ao comércio, à construção civil e às pessoas físicas.</div></div></div>
+      <div class="item"><button>Política da empresa <span class="pl">+</span></button><div class="body"><div>Respeito aos fornecedores; treinamento e aperfeiçoamento profissional dos funcionários; parcerias que favoreçam o crescimento; clientes tratados sempre com ética e transparência; bem-estar da equipe; interação com a comunidade e o meio ambiente; ser modelo de gestão e organização.</div></div></div>
+      <div class="item"><button>Ambiente interno <span class="pl">+</span></button><div class="body"><div>Reuniões semanais para avaliar o desempenho e compartilhar soluções: cada funcionário expõe as dificuldades e as saídas encontradas, que viram parâmetro para o futuro de toda a equipe.</div></div></div>
+    </div>
+
+    <h2 class="title" style="margin-top:64px;text-align:center">Trabalhos e instalações</h2>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="wrap">
+    <p class="kick">Contato</p>
+    <h2 class="title">Não hesite em nos contatar!</h2>
+    <div class="cgrid">
+      <div class="ccard">
+        <h3>Calhas São Marcos</h3>
+        <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Endereço</b><br>Av. Comendador Manuel Senda, 1013 – Pq. Mariela<br>Varginha – MG</span></div>
+        <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg><span><b>Telefone</b><br><a href="tel:+553532123707">(35) 3212-3707</a></span></div>
+        <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span><b>E-mail</b><br><a href="mailto:contato@calhassaomarcos.com.br">contato@calhassaomarcos.com.br</a></span></div>
+        <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span><b>Atendimento</b><br>Residências, comércios, indústrias e construção civil em Varginha e região.</span></div>
+        <a class="btn btn-dark" href="#orcamento" style="margin-top:16px">Pedir orçamento agora</a>
+      </div>
+      <iframe class="map" loading="lazy" title="Mapa — Calhas São Marcos"
+        src="https://www.google.com/maps?q=Av.+Comendador+Manuel+Senda,+1013,+Varginha,+MG&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span><b>Calhas São Marcos</b> — Qualidade lá em cima! · Desde 1997</span>
+    <span>Av. Comendador Manuel Senda, 1013 – Varginha/MG · (35) 3212-3707</span>
+  </div>
+</footer>
+
+<a class="fab" href="#orcamento">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  Pedir orçamento
+</a>
+
+<div class="lightbox" id="lb"><button class="x" id="lbx" aria-label="Fechar">✕</button><img id="lbimg" alt="Foto ampliada"></div>
+
+<script>
+/* ---------- dados dos produtos (textos do site atual, editados) ---------- */
+const BASE="https://calhassaomarcos.com.br/wp-content/uploads/2026/01/";
+const PRODUTOS=[
+ {id:"calhas",nome:"Calhas",img:BASE+"1b-606x296-1.png",
+  desc:"Canais, na sua grande maioria de aço galvanizado, que captam as águas pluviais que correm nas coberturas — impedindo que a água caia livremente e danifique a construção.",
+  itens:["Fabricação sob medida para o seu telhado","Seções retangular, trapezoidal ou semicircular","Declividade correta para não empoçar água"]},
+ {id:"coifas",nome:"Coifas e Chaminés",img:BASE+"1d-607x264-1.png",
+  desc:"Responsáveis pela troca de ar do ambiente, removendo fumaça e gordura. Essenciais em cozinhas industriais, lanchonetes, restaurantes e churrasqueiras.",
+  itens:["Sob medida para fogões e churrasqueiras","Acabamento estético e funcional","Instalação completa com dutos e chaminé"]},
+ {id:"condutores",nome:"Condutores",img:BASE+"1f-610x308-1.png",
+  desc:"O complemento das calhas: direcionam adequadamente o fluxo da água para o despejo em local apropriado ou para armazenagem e reaproveitamento.",
+  itens:["Mesmo padrão de qualidade das calhas","Dimensionados pelo comprimento do telhado","Opção de ligação para reaproveitamento de água"]},
+ {id:"rufos",nome:"Rufos",img:BASE+"1g-631x227-1.png",
+  desc:"Peças moldadas e fixadas em locais específicos para evitar que a água infiltre na alvenaria e cause problemas futuros. Trabalhamos com rufos de encosto e rufos de capa.",
+  itens:["Moldados peça a peça para o local","Proteção contra infiltração em encontros de telhado e parede","Acabamento limpo e durável"]},
+ {id:"pingadeiras",nome:"Pingadeiras",img:BASE+"1h-631x176-1.png",
+  desc:"Acessório colocado na parte superior de beirais, platibandas e muros para evitar infiltração na alvenaria, dando também acabamento estético à arquitetura.",
+  itens:["Protege muros e platibandas de manchas e infiltração","Valoriza o acabamento da fachada","Fabricação nas medidas do projeto"]},
+ {id:"exaustores",nome:"Exaustores Eólicos",img:BASE+"1c.gif",
+  desc:"O exaustor eólico funciona com o deslocamento das massas de ar e o efeito de convecção, proporcionando exaustão contínua de gases, fumaça e calor — renovando o ar do ambiente sem gastar energia.",
+  itens:["Funciona com o vento: custo zero de energia","Ideal para galpões, indústrias e cozinhas","Renovação constante do ar interno"]}
+];
+const tabs=document.getElementById('tabs'), panels=document.getElementById('panels');
+PRODUTOS.forEach((p,i)=>{
+  const b=document.createElement('button');b.className='tab'+(i===0?' on':'');b.textContent=p.nome;b.setAttribute('role','tab');
+  b.onclick=()=>{document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('panel-'+p.id).classList.add('on');};
+  tabs.appendChild(b);
+  const d=document.createElement('div');d.className='panel'+(i===0?' on':'');d.id='panel-'+p.id;
+  d.innerHTML=`<div><h3>${p.nome}</h3><p>${p.desc}</p><ul>${p.itens.map(t=>`<li>${t}</li>`).join('')}</ul><a class="btn btn-dark" href="#orcamento" style="margin-top:20px" onclick="selecionarProduto('${p.nome}')">Quero orçamento de ${p.nome.toLowerCase()}</a></div><div class="fig"><img src="${p.img}" alt="${p.nome} — Calhas São Marcos"></div>`;
+  panels.appendChild(d);
+});
+/* ---------- simulador de orçamento ---------- */
+const SIM={produto:"Calhas",material:"Aço galvanizado",tipo:"Residência"};
+function montarChips(elId,opcoes,chave){
+  const box=document.getElementById(elId);
+  opcoes.forEach(o=>{
+    const c=document.createElement('button');c.className='chipopt'+(SIM[chave]===o?' on':'');c.textContent=o;
+    c.onclick=()=>{SIM[chave]=o;box.querySelectorAll('.chipopt').forEach(x=>x.classList.remove('on'));c.classList.add('on');atualizarResumo();};
+    box.appendChild(c);
+  });
+}
+montarChips('sim-prod',PRODUTOS.map(p=>p.nome),'produto');
+montarChips('sim-mat',["Aço galvanizado","Alumínio","Cobre","PVC","A definir com a equipe"],'material');
+montarChips('sim-tipo',["Residência","Comércio","Indústria","Construção civil"],'tipo');
+const metros=document.getElementById('metros'), mval=document.getElementById('metros-val');
+metros.addEventListener('input',()=>{mval.textContent=metros.value;atualizarResumo();});
+function selecionarProduto(nome){SIM.produto=nome;document.querySelectorAll('#sim-prod .chipopt').forEach(x=>x.classList.toggle('on',x.textContent===nome));atualizarResumo();}
+function atualizarResumo(){
+  const nome=(document.getElementById('sim-nome').value||'').trim();
+  document.getElementById('resumo').innerHTML=
+   `Produto: <b>${SIM.produto}</b><br>Material: <b>${SIM.material}</b><br>Metragem aproximada: <b>${metros.value} metros</b><br>Tipo de imóvel: <b>${SIM.tipo}</b>${nome?`<br>Nome: <b>${nome}</b>`:''}`;
+  const assunto=encodeURIComponent('Pedido de orçamento — '+SIM.produto+' (site)');
+  const corpo=encodeURIComponent(`Olá, equipe Calhas São Marcos!\n\nMonte meu pedido pelo site:\n- Produto: ${SIM.produto}\n- Material: ${SIM.material}\n- Metragem aproximada: ${metros.value} metros\n- Tipo de imóvel: ${SIM.tipo}\n${nome?`- Nome: ${nome}\n`:''}\nAguardo o contato para a medição e o orçamento. Obrigado!`);
+  document.getElementById('btn-enviar').href=`mailto:contato@calhassaomarcos.com.br?subject=${assunto}&body=${corpo}`;
+}
+document.getElementById('sim-nome').addEventListener('input',atualizarResumo);
+atualizarResumo();
+/* ---------- acordeão ---------- */
+document.querySelectorAll('.acc .item').forEach(it=>{
+  const btn=it.querySelector('button'), body=it.querySelector('.body');
+  btn.onclick=()=>{
+    const open=it.classList.contains('open');
+    document.querySelectorAll('.acc .item').forEach(x=>{x.classList.remove('open');x.querySelector('.body').style.maxHeight=null;});
+    if(!open){it.classList.add('open');body.style.maxHeight=body.scrollHeight+'px';}
+  };
+});
+/* ---------- galeria + lightbox ---------- */
+const FOTOS=[
+ [BASE+"1a-instcalha.gif","Instalação de calha"],
+ ["https://calhassaomarcos.com.br/wp-content/uploads/2026/03/VISAO-VALORES.jpeg","Equipe e valores da empresa"],
+ [BASE+"1e.gif","Estrutura de cobertura"],
+ [BASE+"1b-606x296-1.png","Perfis de calhas"]];
+const gal=document.getElementById('gal');
+FOTOS.forEach(([src,alt])=>{const b=document.createElement('button');b.innerHTML=`<img loading="lazy" src="${src}" alt="${alt}">`;b.onclick=()=>{document.getElementById('lbimg').src=src;document.getElementById('lb').classList.add('open');};gal.appendChild(b);});
+document.getElementById('lbx').onclick=()=>document.getElementById('lb').classList.remove('open');
+document.getElementById('lb').addEventListener('click',e=>{if(e.target.id==='lb')e.target.classList.remove('open');});
+/* ---------- header / menu / reveal / contadores ---------- */
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>30),{passive:true});
+document.getElementById('burger').onclick=()=>document.getElementById('menu').classList.toggle('open');
+document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>document.getElementById('menu').classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const alvo=+e.target.dataset.count,t0=performance.now();
+  (function tick(t){const p=Math.min((t-t0)/1100,1);e.target.textContent=Math.round(alvo*(0.2+0.8*p));if(p<1)requestAnimationFrame(tick);})(t0);
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
